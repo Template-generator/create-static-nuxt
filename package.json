@@ -13,19 +13,27 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
-    "@nuxtjs/bulma": "^1.2.0",
-    "@nuxtjs/axios": "^5.0.0"
+    "@fortawesome/fontawesome-svg-core": "1.2.13",
+    "@fortawesome/free-brands-svg-icons": "5.7.0",
+    "@fortawesome/free-regular-svg-icons": "5.7.0",
+    "@fortawesome/free-solid-svg-icons": "5.7.0",
+    "@fortawesome/vue-fontawesome": "0.1.5",
+    "@nuxtjs/axios": "5.3.6",
+    "@nuxtjs/google-analytics": "2.0.2",
+    "bulma": "0.7.2",
+    "node-sass": "4.11.0",
+    "nuxt": "2.3.4",
+    "nuxt-fontawesome": "0.4.0",
+    "sass-loader": "7.1.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0",
-    "babel-eslint": "^8.2.1",
-    "eslint": "^5.0.1",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0",
-    "eslint-config-prettier": "^3.1.0",
+    "babel-eslint": "8.2.6",
+    "conventional-changelog-cli": "2.0.11",
+    "eslint": "5.10.0",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-loader": "2.1.1",
     "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-vue": "4.7.1",
     "prettier": "1.14.3"
   }
 }
