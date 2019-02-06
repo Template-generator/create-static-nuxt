@@ -2,6 +2,7 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
+  modern: 'client',
 
   /*
    ** Headers of the page
