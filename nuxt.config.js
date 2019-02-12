@@ -8,7 +8,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: pkg.name,
+    title: "Hello world",
     meta: [
       {
         charset: 'utf-8'
@@ -52,7 +52,7 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['~/assets/styles/font.scss', '~/assets/styles/bulma.scss'],
+  css: ['~/assets/styles/font', '~/assets/styles/bulma'],
 
   /*
    ** Plugins to load before mounting the App
@@ -65,7 +65,7 @@ module.exports = {
   modules: ['@nuxtjs/axios', '@nuxtjs/google-analytics', 'nuxt-fontawesome'],
 
   'google-analytics': {
-    id: 'UA-124896160-6'
+    id: ''
   },
 
   /*
@@ -82,20 +82,23 @@ module.exports = {
       {
         set: '@fortawesome/free-solid-svg-icons',
         icons: ['fas']
-      },
-      {
-        set: '@fortawesome/free-regular-svg-icons',
-        icons: ['far']
-      },
-      {
-        set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fab']
+        // icons: ['faArrowCircleLeft', 'faChevronUp']
       }
+//       {
+//         set: '@fortawesome/free-regular-svg-icons',
+//         icons: ['far']
+//       },
+//       {
+//         set: '@fortawesome/free-brands-svg-icons',
+//         icons: ['fab']
+//       }
     ]
   },
 
   generate: {
-    fallback: '404.html'
+    subFolders: false,
+    fallback: '404.html',
+    routes: ['404']
   },
 
   /*
@@ -114,10 +117,10 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, { isDev, isClient, loaders }) {
-      if (isDev) loaders.cssModules.localIdentName = '[name]_[local]'
+      if (isDev) loaders.cssModules.localIdentName = '_[name]_[local]'
       else
         loaders.cssModules.localIdentName =
-          'kcnt__[name]_[contenthash:base64:18]'
+          '[name]-[sha512:contenthash:base64:4]-[sha512:contenthash:hex:4]-[sha256:contenthash:base64:4]-[sha256:contenthash:hex:4]'
 
       // Run ESLint on save
       if (isDev && isClient) {
