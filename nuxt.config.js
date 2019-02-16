@@ -57,12 +57,17 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['~/plugins/axios.js'],
 
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/axios', '@nuxtjs/google-analytics', 'nuxt-fontawesome'],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/google-analytics',
+    'nuxt-fontawesome',
+    '@nuxtjs/markdownit'
+  ],
 
   'google-analytics': {
     id: ''
@@ -73,6 +78,15 @@ module.exports = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+  },
+
+  // [optional] markdownit options
+  // See https://github.com/markdown-it/markdown-it
+  markdownit: {
+    injected: true,
+    preset: 'default',
+    linkify: true,
+    breaks: true
   },
 
   fontawesome: {
